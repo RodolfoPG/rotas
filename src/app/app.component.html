@@ -27,7 +27,7 @@
   </mat-sidenav>
   <mat-sidenav-content class="content">
       <p>Entre com o id do curso</p>
-      <input #idCurso>
+      <input #idCurso (input)="0">
       <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

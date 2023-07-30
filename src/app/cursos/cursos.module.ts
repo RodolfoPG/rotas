@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+// import { RouterModule } from '@angular/router';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -11,6 +11,7 @@ import { CursosComponent } from './cursos.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 import { CursosService } from './cursos.service';
+import { CursosRoutingModule } from './cursos-routing.module';
 
 
 
@@ -23,11 +24,12 @@ import { CursosService } from './cursos.service';
   ],
   imports: [
     CommonModule,
-    RouterModule,
+    // RouterModule,
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    CursosRoutingModule
   ],
   providers: [CursosService]
 })

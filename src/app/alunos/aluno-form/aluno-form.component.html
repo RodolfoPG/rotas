@@ -6,7 +6,7 @@
 </mat-form-field>
 <mat-form-field>
     <mat-label>Nome</mat-label>
-    <input matInput [(ngModel)]="aluno.nome">
+    <input matInput [(ngModel)]="aluno.nome" (input)="onInput()">
 </mat-form-field>
 <mat-form-field>
     <mat-label>Email</mat-label>

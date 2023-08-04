@@ -1,4 +1,4 @@
-import { CanActivateFn } from '@angular/router';
+import { CanActivateFn, CanMatchFn, Route, UrlSegment } from '@angular/router';
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -18,3 +18,19 @@ export const authGuard: CanActivateFn = (route, state) => {
 
   return false;
 };
+
+export const canMatchFn: CanMatchFn = (route: Route, segments: UrlSegment[]) => {
+
+  console.log('canLoad: verificando se usuário pode carregar o cod do módulo')
+
+  const auth = inject(AuthService);
+  const router = inject(Router);
+
+  if (auth.verificaUsuarioAutenticado) {
+    return true;
+  }
+
+  router.navigate(['/login']);
+
+  return false; 
+}

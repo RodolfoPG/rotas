@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from './login/auth.service';
 import { FormsModule } from '@angular/forms';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 // import { CursosModule } from './cursos/cursos.module';
 // import { AlunosModule } from './alunos/alunos.module';
 //import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     LoginComponent,
+    PaginaNaoEncontradaComponent,
     //CursosComponent,
     //CursoDetalheComponent,
     //CursoNaoEncontradoComponent
